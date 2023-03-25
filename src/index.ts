@@ -1,24 +1,16 @@
-import { Injector, Logger, webpack } from "replugged";
+import { Injector, common } from "replugged";
+import { uwuify } from "./helpers";
 
 const inject = new Injector();
-const logger = Logger.plugin("PluginTemplate");
 
-export async function start(): Promise<void> {
-  const typingMod = await webpack.waitForModule<{
-    startTyping: (channelId: string) => void;
-  }>(webpack.filters.byProps("startTyping"));
-  const getChannelMod = await webpack.waitForModule<{
-    getChannel: (id: string) => {
-      name: string;
-    };
-  }>(webpack.filters.byProps("getChannel"));
+export function start(): void {
+  inject.after(common.messages, "sendMessage", (args) => {
+    const { content } = args[1];
 
-  if (typingMod && getChannelMod) {
-    inject.instead(typingMod, "startTyping", ([channel]) => {
-      const channelObj = getChannelMod.getChannel(channel);
-      logger.log(`Typing prevented! Channel: #${channelObj?.name ?? "unknown"} (${channel}).`);
-    });
-  }
+    args[1].content = uwuify(content);
+
+    return args;
+  });
 }
 
 export function stop(): void {

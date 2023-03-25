@@ -1,16 +1,16 @@
 {
-  "id": "dev.replugged.PluginTemplate",
-  "name": "Plugin Template",
-  "description": "A plugin template",
+  "id": "tk.milenakos.Pluwugin",
+  "name": "The Pluwugin",
+  "description": "M-makes you go UwU~~ <3",
   "author": {
-    "name": "replugged",
-    "discordID": "1000992611840049192",
-    "github": "replugged-org"
+    "name": "Milenakos",
+    "discordID": "553093932012011520",
+    "github": "milena-kos"
   },
   "version": "1.0.0",
   "updater": {
     "type": "github",
-    "id": "replugged-org/plugin-template"
+    "id": "milena-kos/replugged-pluwugin"
   },
   "license": "MIT",
   "type": "replugged-plugin",
