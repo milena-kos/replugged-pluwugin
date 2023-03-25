@@ -11,6 +11,10 @@ specifiers:
   prettier: ^2.8.1
   replugged: ^4.2.1
   typescript: ^4.8.4
+  uwuifier: ^4.0.5
+
+dependencies:
+  uwuifier: 4.0.5
 
 devDependencies:
   '@types/node': 18.11.2
@@ -4027,6 +4031,10 @@ packages:
     resolution: {integrity: sha512-O11mqxmi7wMKCo6HKFt5AhO4BwY3VV68YU07tgxfz8zJTIxr4BpsezN49Ffwy9j3ZpwwJp4fkRwjRzq3uWE6Rg==}
     engines: {node: '>= 4'}
     dev: true
+
+  /uwuifier/4.0.5:
+    resolution: {integrity: sha512-aY94c/5dRXEpJb12H/8DeLbCFfkIjqkLLJz0Ogj46WXsVkvq+CYUmCxs3S4sJGtb78cI8x/PQN6ZXe4QApcIYw==}
+    dev: false
 
   /w3c-keyname/2.2.6:
     resolution: {integrity: sha512-f+fciywl1SJEniZHD6H+kUO8gOnwIr7f4ijKA6+ZvJFjeGi1r4PDLl53Ayud9O/rk64RqgoQine0feoeOU0kXg==}
